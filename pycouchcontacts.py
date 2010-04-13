@@ -48,3 +48,21 @@ def get_database(url, database):
     """
     return execute('GET', '%s/%s' % (url, database))
 
+def get_docs(url, database):
+    """
+    Returns the documents in a database
+    """
+    return execute('GET', '%s/%s/_all_docs' % (url, database))
+
+def display(obj):
+    """
+    Displays JSON objects nicely.
+    * `response` is a dict which we need to dump to formatted JSON.
+    * `content` is already JSON, so we load to a dict and then dump to formatted JSON.
+    """
+    if str(type(obj)) == "<class 'httplib2.Response'>":
+        print json.dumps(obj, sort_keys=True, indent=2)
+    else:
+        print json.dumps(json.loads(obj), sort_keys=True, indent=2)
+
+

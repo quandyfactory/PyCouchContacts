@@ -5,7 +5,7 @@ A web application in Python, web.py and couchdb application to manage contacts.
 """
 
 __title__ = 'PyCouchContacts'
-__version__ = 0.1
+__version__ = 0.01 # no 0.1 until it's a working version
 __author__ = "Ryan McGreal ryan@quandyfactory.com"
 __homepage__ = "http://quandyfactory.com/projects/51/pycouchcontacts"
 __copyright__ = "(C) 2010 by Ryan McGreal. Licenced under GNU GPL 2.0\nhttp://www.gnu.org/licenses/old-licenses/gpl-2.0.html"

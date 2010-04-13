@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 """
-Python web.py and couchdb application to manage contacts.
+A web application in Python, web.py and couchdb application to manage contacts.
 """
 
 __title__ = 'PyCouchContacts'
@@ -10,8 +10,9 @@ __author__ = "Ryan McGreal ryan@quandyfactory.com"
 __homepage__ = "http://quandyfactory.com/projects/51/pycouchcontacts"
 __copyright__ = "(C) 2010 by Ryan McGreal. Licenced under GNU GPL 2.0\nhttp://www.gnu.org/licenses/old-licenses/gpl-2.0.html"
 
-import json
 import httplib2
+try: import json
+except: import simplejson as json
 
 http = httplib2.Http('.cache')                    
 headers = { 'Content-Type': 'application/json' }
